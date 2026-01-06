@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 # DEC Docker Training
 
@@ -68,6 +67,5 @@ Below is a collection of high-quality free resources to help you learn Docker ef
 
 - **[Docker CLI Cheat Sheet by Docker](https://docs.docker.com/get-started/docker_cheatsheet.pdf)**: Features the common Docker CLI commands for easy reference.
 
-=======
-# dec_docker_training
->>>>>>> a400ed766ed67534ca850e2f6bf91334a96a2956
+
+
