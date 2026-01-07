@@ -1,71 +1,110 @@
+# My Awesome Project
 
-# DEC Docker Training
+## Project Title
 
-This repository contains practice commands, exercises and resources to help you learn Docker by building, packaging, and deploying application.
-
----
-
-## Repository Structure
-
-- `app/`: Contains Python scripts for simple data processing.
-  - `data_process_db.py`: A Python script to simulate processing data with a PostgreSQL database.
-  - `data_process.py`: A Python script for simple data processing tasks without a database.
-  - `student.csv`: sample csv file for upload.
-- `PracticeCommands.md`: A document that provides common Docker commands to practice and learn how to work with containers and images.
-- `requirements/`: Contains the requirements file for Python dependencies.
-- `Tasks.md`: A step-by-step guide for completing the Docker training exercises.
-- `LICENSE`: License file containing terms of use.
+**Dockerized Streamlit CSV-to-PostgreSQL Application**
 
 ---
 
-## Getting Started
+## Description
 
-To get started, follow these steps:
+This project is a Docker-based Streamlit application that allows users to upload a CSV file through a web interface, automatically load the data into a PostgreSQL database, which also has the persistent storage capability in case of sudden deletion of the database and display basic data insights such as preview rows and summary statistics.
 
-1. **Practice Docker Commands:**
-   Check `PracticeCommands.md` to practice essential Docker commands and get hands-on experience with building and managing Docker images and containers.
+It demonstrates practical usage of:
 
-2. **Review and Complete Tasks:**
-   Open `Tasks.md` to get a detailed guide on the projects and the tasks you need to complete to learn Docker by doing.
-
----
-
-## Learning Goals
-
-By the end of this execises, you should be able to:
-
-- Understand the fundamentals of Docker containers.
-- Build Docker images from Python applications.
-- Manage containers and images with Docker CLI commands.
-- Push Docker images to Docker Hub for deployment and sharing.
-- Understand multi-container application with docker compose.
-- Be up and running with docker.
+* Docker and Docker Compose
+* Streamlit for data apps
+* Persistent Storage using volume
+* PostgreSQL as a relational database
+* SQLAlchemy and Pandas for data ingestion
 
 ---
 
-# Docker Learning Resources
+## Installation
 
-Below is a collection of high-quality free resources to help you learn Docker effectively. It contains documentation, video tutorials, interactive labs, and cheat sheets.
+Follow the steps below to set up the project locally.
+
+### Prerequisites
+
+* Docker
+* Docker Compose
+
+### Steps
+
+1. **Clone the repository**
+
+   ```bash
+   git clone <your-repo-url>
+   cd <your-project-folder>
+   ```
+
+2. **Create a `.env` file** in the project root and add the following:
+
+   ```env
+   POSTGRES_HOST=database_service
+   POSTGRES_USER=postgres
+   POSTGRES_PASSWORD=rmd1234
+   POSTGRES_DB=postgres
+   POSTGRES_PORT=5432
+   ```
+
+3. **Build and start the containers**
+
+   ```bash
+   docker compose up --build
+   ```
+
+4. **Access the application**
+
+   Open your browser and go to:
+
+   ```
+   http://localhost:8080
+   ```
 
 ---
 
-## 📖 Official Documentation & Guides
+## Usage
 
-- **[Docker Docs](https://docs.docker.com/get-started/)**: The official documentation is the best place to start learning Docker concepts and best practices.
+1. Launch the application using Docker Compose.
+2. Open the Streamlit UI in your browser.
+3. Upload a CSV file using the file uploader.
+4. The application will:
 
-- **[Docker Under The Hood](https://medium.com/data-engineer-things/docker-under-the-hood-part-one-03abda8b631f?sk=21bdd4fd244b158c5c9856d9c247b705)**: Nancy's article on Docker for beginners.
+   * Read the CSV file
+   * Create a PostgreSQL table using the filename
+   * Load the data into the database
+   * Display the first few rows and summary statistics
 
-## 🎥 Free Video Tutorials
+---
 
-- **[Docker Full Course – TechWorld with Nana (YouTube)](https://youtu.be/3c-iBn73dDE?si=cKNWzKmNMgf2ozlL)**: A comprehensive beginner-friendly course covering Docker fundamentals.
+## Contributing
 
-## 🏗 Interactive Learning & Hands-on Labs
+Contributions are welcome!
 
-- **[Play with Docker](https://labs.play-with-docker.com/)**: An online playground where you can practice Docker commands without installing anything.
+To contribute:
 
-## 📑 Cheat Sheets & Reference Guides
+1. Fork the repository
+2. Create a new feature branch
 
-- **[Docker CLI Cheat Sheet by Docker](https://docs.docker.com/get-started/docker_cheatsheet.pdf)**: Features the common Docker CLI commands for easy reference.
+   ```bash
+   git checkout -b feature/my-feature
+   ```
+3. Commit your changes
+4. Push to your fork
+5. Open a Pull Request
 
+Please ensure code follows best practices and includes relevant documentation.
 
+---
 
+## License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## Contact
+
+**Maintainer:** Raymond Afuye
+**Email:** [raymondafuye@gmail.com]
