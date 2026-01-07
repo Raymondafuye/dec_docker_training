@@ -74,6 +74,7 @@ Follow the steps below to set up the project locally.
    * Read the CSV file
    * Create a PostgreSQL table using the filename
    * Load the data into the database
+   * Persist the Storage
    * Display the first few rows and summary statistics
 
 ---
