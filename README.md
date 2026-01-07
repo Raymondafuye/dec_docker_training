@@ -34,8 +34,8 @@ Follow the steps below to set up the project locally.
 1. **Clone the repository**
 
    ```bash
-   git clone <your-repo-url>
-   cd <your-project-folder>
+   git clone https://github.com/Raymondafuye/dec_docker_training.git
+   cd dec_docker_training
    ```
 
 2. **Create a `.env` file** in the project root and add the following:
